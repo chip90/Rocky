@@ -1,14 +1,14 @@
-﻿@model IEnumerable<Rocky.Models.Category>
+﻿@model IEnumerable<Rocky.Models.ApplicationType>
 
 
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Category List</h2>
+            <h2 class="text-primary">Application Type List</h2>
         </div>
         <div class="col-6 text-right">
-            <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
-                Create New Category
+            <a asp-action="Create" class="btn btn-primary">
+                Create New Application Type
             </a>
             
         </div>
@@ -22,11 +22,9 @@
             <thead>
                 <tr>
                     <th>
-                        Category Name
+                        Name
                     </th>
-                    <th>
-                        Display Order
-                    </th>
+                    
                     <th></th>
                 </tr>
             </thead>
@@ -34,8 +32,8 @@
                 @foreach(var obj in Model)
                 {
                     <tr>
-                        <td width="50%">@obj.Name</td>
-                        <td width="30%">@obj.DisplayOrder</td>
+                        
+                        <td width="30%">@obj.Name</td>
                         <td></td>
                     </tr>
                 }
@@ -44,7 +42,7 @@
     }
     else
     {
-        <p>No category exists.</p>
+        <p>No Application Type exists.</p>
     }
 
 </div>
